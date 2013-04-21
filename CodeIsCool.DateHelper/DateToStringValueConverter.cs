@@ -15,12 +15,7 @@ namespace CodeIsCool.DateHelper
 
             var dateTime = (DateTime) value;
 
-            var secondDateTime = DateTime.Now;
-
-            if (parameter != null)
-            {
-                secondDateTime = (DateTime) parameter;
-            }
+            var secondDateTime =  parameter == null ? DateTime.Now : (DateTime)parameter;
 
             var timeSpan = secondDateTime.Subtract(dateTime);
 
